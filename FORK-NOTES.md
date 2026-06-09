@@ -20,3 +20,7 @@ used as a git submodule by the `dealia` repo (the Dealia family bot).
 
 Upstream is read-only for us, and these patches must travel with the bot across machines.
 Both Macs' submodule remote points here; the dealia auto-pull keeps the bot host in sync.
+
+When you commit in this submodule on the new Mac, the dealia bump-guard
+(`tools/scripts/submodule-post-commit-bump.sh`) auto-pushes the commit and bumps
+the superproject gitlink, so the change reaches the bot host automatically.
